@@ -12,9 +12,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText Name;
-    EditText Email;
-    EditText Age;
+    EditText name;
+    EditText email;
+    EditText user;
     DatePicker simpleDatePicker;
     Button submit;
 
@@ -33,8 +33,18 @@ public class MainActivity extends AppCompatActivity {
                 String day = "Day = " + simpleDatePicker.getDayOfMonth();
                 String month = "Month = " + (simpleDatePicker.getMonth() + 1);
                 String year = "Year = " + simpleDatePicker.getYear();
+
+                if (Integer.parseInt(year) < 2000){
+
+                    if(Integer.parseInt(year)==2000){
+                        if(Integer.parseInt(month)<4){
+
+                        }
+                    }
+                }
+
                 // display the values by using a toast
-                Toast.makeText(getApplicationContext(), day + "\n" + month + "\n" + year, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), day + "\n" + month + "\n" + year, Toast.LENGTH_LONG).show();
             }
         });
     }
